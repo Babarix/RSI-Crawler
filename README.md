@@ -1,4 +1,4 @@
 RSI-Crawler
 ===========
 
-A Crawler for thw Star Citizen Wiki
+A Crawler for the Star Citizen Wiki
