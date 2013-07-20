@@ -32,6 +32,7 @@ namespace RSI_Crawler
         {
             button1.Enabled = false;
             textBox2.Enabled = false;
+            listBox1.Items.Clear();
 
             bwc = new BWCrawler();
 
@@ -109,5 +110,32 @@ namespace RSI_Crawler
             Process.Start("https://github.com/Babarix/RSI-Crawler/blob/master/README.md");
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            String sout = "";
+
+            foreach (FormattedLink fl in listBox1.Items)
+            {
+                sout += fl.getData(propertyGrid1.SelectedGridItem.Label) + Environment.NewLine;
+            }
+
+            System.Windows.Forms.Clipboard.SetText(sout);
+        }
+
+        //private void propertyGrid1_MouseClick(object sender, MouseEventArgs e)
+        //{            
+        //    PropertyGrid pg = (PropertyGrid)sender;
+        //    System.Windows.Forms.Clipboard.SetText(pg.SelectedGridItem.Value.ToString());
+        //}
+
     }
 }
+
+// List for latter
+//- fix copy to clipbord
+//- Color of proberty grid
+//- Pas HTML to Formatted links
+//- extraced titel & date from html
+//- Sentence the searchterm is in
+//- Preview of search place/tooltip| html to browser + highlight
+
