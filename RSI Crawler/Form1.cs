@@ -39,7 +39,7 @@ namespace RSI_Crawler
 
             label3.Text = "Status: Starting";
 
-            findings = bwc.run(textBox2.Text);
+            findings = bwc.run(textBox2.Text.Trim());
 
             label3.Text = "Status: Done and " + findings.Count + " found. Babarix wishes you a good day.";
             label4.Text = "";
@@ -69,6 +69,7 @@ namespace RSI_Crawler
         {
             this.Invoke((MethodInvoker)delegate
             {
+                label3.Text = "Status: ON";
                 label4.Text = "Found: " + found + " Searched: " + searched + "/1000 Page: " + page;
             });
         }
@@ -105,7 +106,7 @@ namespace RSI_Crawler
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Process.Start("http://google.com");
+            Process.Start("https://github.com/Babarix/RSI-Crawler/blob/master/README.md");
         }
 
     }

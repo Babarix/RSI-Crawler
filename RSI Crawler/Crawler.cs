@@ -69,7 +69,7 @@ namespace RSI_Crawler
             while (!reached_end)
             { 
                 page++;
-                CrawlResult result = crawler.Crawl(new Uri(ilink + "&page=" + page));
+                CrawlResult result = crawler.Crawl(new Uri(ilink.Replace(' ','+') + "&page=" + page));
                 if (result.ErrorOccurred)
                 {
                     Console.WriteLine("Crawl of {0} completed with error: {1}", result.RootUri.AbsoluteUri, result.ErrorException.Message);
