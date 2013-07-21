@@ -92,7 +92,7 @@ namespace RSI_Crawler
         {
             bool retb = false;
             searched++;
-
+            
             if (cp.RawContent.ToLower().Contains(serchterm.ToLower()))
             {
                 retb = true;

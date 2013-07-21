@@ -122,6 +122,14 @@ namespace RSI_Crawler
             System.Windows.Forms.Clipboard.SetText(sout);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+
+            f.ShowDialog();
+
+        }
+
         //private void propertyGrid1_MouseClick(object sender, MouseEventArgs e)
         //{            
         //    PropertyGrid pg = (PropertyGrid)sender;
